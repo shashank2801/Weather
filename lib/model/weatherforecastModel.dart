@@ -106,7 +106,7 @@ class Lista {
   dynamic speed;
   int deg;
   int clouds;
-  double rain;
+  String rain;
 
   Lista(
       {this.dt,
@@ -141,7 +141,7 @@ class Lista {
     speed = json['speed'];
     deg = json['deg'];
     clouds = json['clouds'];
-    rain = json['rain'];
+    rain = json['rain'].toString();
   }
 
   Map<String, dynamic> toJson() {

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:weather/current/mainScreen.dart';
+import 'package:weather/mainScreen.dart';
 import 'package:weather/util/colors.dart';
-import 'package:weather/weather_screen.dart';
-
 
 void main() {
   runApp(MyApp());
@@ -12,10 +10,14 @@ ThemeData _weatherTheme(){
     final ThemeData base = ThemeData.fallback();
 
     return base.copyWith(
-      brightness: Brightness.light
-      // accentColor: primaryCyanA700,
-      // primaryColor: primaryCyanDark,
-      // hintColor: textonPrimaryBlack,
+      brightness: Brightness.light,
+      textTheme: TextTheme(
+        bodyText1: TextStyle(
+          fontSize: 14,
+         // color: textonSecondaryWhite,
+          fontWeight: FontWeight.w600,
+        ),
+      ),
     );
   }
 
@@ -25,10 +27,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Weather App',
+      title: 'Weather',
       theme: _weatherTheme(),
       debugShowCheckedModeBanner: false,
-      home: WeatherApp(),
+      home: CurrentLocationScreen(),
       );
   }
 }

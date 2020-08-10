@@ -6,25 +6,25 @@ String getImage({String weatherDescription}){
   switch(weatherDescription){
       case "Clear":
         if(now.hour<20)
-        {return "assets/sunny.jpg";}
+        {return "assets/sunnyVec.png";}
         else
-        {return "assets/clear.jpg";}
+        {return "assets/clearVec.png";}
         break;
       
       case "Clouds":
-        {return "assets/cloud.jpg";}
+        {return "assets/cloudVec.png";}
         break;
 
       case "Rain":
-        {return "assets/rain.jpg";}
+        {return "assets/rainVec.png";}
         break;
 
       case "Snow":
-        {return "assets/snow.jpg";}
+        {return "assets/snowVec.png";}
         break;
       
       default:
-        {return "assets/sunny.jpg";}
+        {return "assets/sunnyVec.png";}
         break;
     }
 }

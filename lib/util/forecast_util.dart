@@ -5,6 +5,6 @@ class Util{
 
   static getFormattedDate(DateTime dateTime){
 
-    return new DateFormat.yMMMMEEEEd().format(dateTime);
+    return new DateFormat.yMMMd().format(dateTime);
   }
 }
